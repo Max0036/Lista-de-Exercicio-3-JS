@@ -1,0 +1,26 @@
+<hml>
+    <script>  
+    function inter() {
+        document.getElementById('result').value = "";
+        var n1 = document.getElementById('nome1').value;
+        var n2 = document.getElementById('nome2').value;
+    
+        if (n1.length < n2.length) {
+            var result = n2.length;
+        } else {
+            var result = n1.length;
+        }
+    
+        for (i = 0; i < result; i++) {
+            document.getElementById('result').value += n1.substring(i, i + 1) + n2.substring(i, i + 1);
+        }
+    }
+    </script>
+        <body>
+           <form >
+                Primeiro Nome <input id="nome1" type="text"><br><br>
+                Segundo Nome <input id="nome2" type="text" onchange="javascript:inter();"><br><br>
+                 Resultado <input id="result" type="text" disabled>
+                    </for>          
+        </body>
+    </hml>
