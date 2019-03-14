@@ -1,0 +1,36 @@
+<html>
+<read>    
+<script >
+function guarda_palavra(){
+       
+       text = document.getElementById('nome1').value;
+       text1 = document.getElementById('nome2').value;  
+       text2 = document.getElementById('nome3').value;
+       text3 = document.getElementById('nome4').value;
+       text4 = document.getElementById('nome5').value;
+       
+        
+        var vetor = [];
+        vetor.push ( text, text1, text2, text3,  text4 );
+        vetor.reverse();
+        
+        document.getElementById('nome1').value = vetor[0];
+        document.getElementById('nome2').value = vetor[1];
+        document.getElementById('nome3').value = vetor[2];
+        document.getElementById('nome4').value = vetor[3];
+        document.getElementById('nome5').value = vetor[4];
+ }
+</script>
+
+
+<body>
+        <input type='text' id='nome1' placeholder='digite o PRIMEIRO nome'> <br /><br /> 
+        <input type='text' id='nome2' placeholder='digite o SEGUNDO nome' ><br /><br />
+        <input type='text' id='nome3' placeholder='digite o TERCEIRO nome' ><br /><br />
+        <input type='text' id='nome4' placeholder='digite o QUARTO nome' ><br /><br />
+        <input type='text' id='nome5' placeholder='digite o QUINTO nome' ><br /><br />
+        
+        <button onclick="guarda_palavra()"> Inverter </button>
+</body>
+</head>
+</html>
