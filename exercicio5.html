@@ -1,0 +1,57 @@
+<html>
+     
+
+<title>Validando Formulários com Javascript</title>
+
+<script>
+        function validar() {
+        var nome = form1.nome.value;
+        var email = form1.email.value;
+        var senha = form1.senha.value;
+        var rep_senha = form1.rep_senha.value;
+        
+        if (nome == "") {
+        alert('Preencha o campo com seu nome');
+        form1.nome.focus();
+        return false;
+        }
+        
+        if (senha =="" ) {
+        alert('Digite uma senha');
+        form1.senha.focus();
+        return false;
+        }else if (senha.lengt <6 && senha <10 ){ 
+                alert('Senha tera que conter entre 6 e 10 caracteres');
+                form1.senha.focus();
+                return false;
+        }
+        if (senha != rep_senha) {
+        alert('Senhas diferentes');
+        form1.senha.focus();
+        return false;
+        }else if (senha.lengt <6 && senha <10 ){ 
+                alert('Digite uma senha valida');
+                form1.senha.focus();
+                return false;
+        }
+}
+ </script>
+
+
+
+<body>
+<form name="form1" action="enviar.php" method="post">
+Nome:
+<input name="nome" type="text"><br /><br />
+Email:
+<input name="email" type="text"><br /><br />
+Senha:
+<input name="senha" type="password"><br /><br />
+Repitir Senha:
+<input name="rep_senha" type="password"><br /><br />
+<input type="submit"  onclick="return validar()">
+</form>
+
+</body>
+
+</html>

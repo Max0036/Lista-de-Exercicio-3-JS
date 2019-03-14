@@ -1,0 +1,30 @@
+<html>
+<script>
+
+    var fraseUser = prompt("Escreva uma palavra e verá se é um palindromo","Escreva aqui");
+    
+    function frasePalindromo(fraseUser){
+      
+      fraseUser=fraseUser.toLowerCase().replace(/\s/g,"");
+      
+      fraserReverse=fraseUser.split("").reverse().toString();
+      
+      for (var i = 0; i < ((fraserReverse.length)-1); i++) {
+        fraserReverse=fraserReverse.replace(",","");
+      };
+      
+      if(fraseUser==fraserReverse){
+       
+        resultado="É um Palindromo";
+      }
+      else{
+        
+        resultado="NÃO é Palindromo";
+      }
+      
+      document.write("Sua palavra "+resultado);
+    }
+    
+    frasePalindromo(fraseUser);
+ </script>
+    </html>
